@@ -9,5 +9,7 @@ nodeGroups:
   - name: expense
     instanceType: m5.large
     desiredCapacity: 3
-    spot: true
+    spot: true  # This is correct if you want to use spot instances.
+    spotPrice: "0.05"  # Set your desired maximum price per hour for the spot instances.
+
   
