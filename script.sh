@@ -45,13 +45,13 @@ echo -e "$G Kubectl Installation $N"
 curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.31.0/2024-09-12/bin/linux/amd64/kubectl
 chmod +x ./kubectl
 mv kubectl /usr/local/bin/kubectl
-kubectl version
+# kubectl version
 
-echo -e "$G Docker Installation Successfully Completed $N"
+echo -e "$G Kubectl Installation Successfully Completed $N"
 
 # eksctl Installation
 
-echo -e "$Y Docker Installation Successfully Completed $N"
+echo -e "$Y eksctl Installation Successfully Completed $N"
 
 ARCH=amd64
 PLATFORM=$(uname -s)_$ARCH
@@ -65,5 +65,5 @@ tar -xzf eksctl_$PLATFORM.tar.gz -C /tmp && rm eksctl_$PLATFORM.tar.gz
 
 mv /tmp/eksctl /usr/local/bin
 
-echo -e "$G Docker Installation Successfully Completed $N"
+echo -e "$G eksctl Installation Successfully Completed $N"
 
