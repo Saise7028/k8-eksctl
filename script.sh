@@ -51,7 +51,7 @@ echo -e "$G Kubectl Installation Successfully Completed $N"
 
 # eksctl Installation
 
-echo -e "$Y eksctl Installation Successfully Completed $N"
+echo -e "$Y eksctl Installation $N"
 
 ARCH=amd64
 PLATFORM=$(uname -s)_$ARCH
