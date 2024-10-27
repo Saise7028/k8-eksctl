@@ -8,8 +8,8 @@ resource "aws_instance" "k8_eksctl" {
 
 }
 
-resource "aws_security_group" "Allow_All_k8_eksctl" {
-  name        = "Allow_All"
+resource "aws_security_group" "Allow_All_SSH_k8_eksctl" {
+  name        = "Allow_All_SSH"
   description = "Allow port number 22 for ssh Access"
 
   egress {
