@@ -1,7 +1,7 @@
 resource "aws_instance" "k8_eksctl" {
   ami                    = "ami-09c813fb71547fc4f"
   instance_type          = "t2.micro"
-  vpc_security_group_ids = ["vpc-0b8195d98ce48090a"]
+  vpc_security_group_ids = [aws_security_group.Allow_All_k8_eksctl.id]
   tags = {
     Name = "k8_eksctl"
   }
