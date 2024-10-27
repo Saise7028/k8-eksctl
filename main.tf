@@ -1,4 +1,4 @@
-resource "aws_instance" "workstation" {
+resource "aws_instance" "work_station" {
   ami                    = "ami-09c813fb71547fc4f"
   instance_type          = "t2.micro"
   vpc_security_group_ids = ["vpc-0b8195d98ce48090a"]
@@ -8,7 +8,7 @@ resource "aws_instance" "workstation" {
 
 }
 
-resource "aws_security_group" "allow_all_workstation" {
+resource "aws_security_group" "allow_all_work_station" {
   name        = "Allow_All"
   description = "Allow port number 22 for ssh Access"
 
