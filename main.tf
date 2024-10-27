@@ -1,15 +1,15 @@
 resource "aws_instance" "k8_eksctl" {
   ami                    = "ami-09c813fb71547fc4f"
   instance_type          = "t2.micro"
-  vpc_security_group_ids = [aws_security_group.Allow_All_k8_eksctl.id]
+  vpc_security_group_ids = [aws_security_group.default_k8_eksctl]
   tags = {
     Name = "k8_eksctl"
   }
 
 }
 
-resource "aws_security_group" "Allow_All_SSH_k8_eksctl" {
-  name        = "Allow_All_SSH"
+resource "aws_security_group" "default_k8_eksctl" {
+  name        = "default"
   description = "Allow port number 22 for ssh Access"
 
   egress {
