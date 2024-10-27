@@ -1,14 +1,14 @@
-resource "aws_instance" "station" {
+resource "aws_instance" "k8_eksctl" {
   ami                    = "ami-09c813fb71547fc4f"
   instance_type          = "t2.micro"
   vpc_security_group_ids = ["vpc-0b8195d98ce48090a"]
   tags = {
-    Name = "station"
+    Name = "k8_eksctl"
   }
 
 }
 
-resource "aws_security_group" "allow_all_station" {
+resource "aws_security_group" "Allow_All_k8_eksctl" {
   name        = "Allow_All"
   description = "Allow port number 22 for ssh Access"
 
@@ -31,7 +31,7 @@ resource "aws_security_group" "allow_all_station" {
   }
 
   tags = {
-    Name = "station"
+    Name = "k8_eksctl"
   }
 
 
